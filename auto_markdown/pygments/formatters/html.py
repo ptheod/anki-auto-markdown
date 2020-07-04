@@ -697,6 +697,8 @@ class HtmlFormatter(Formatter):
             style.append(self.prestyles)
         if self.noclasses:
             style.append('line-height: 100%')
+            if (self.style.default_style is not None):
+                style.append('color: %s' % (self.style.default_style,))
         style = '; '.join(style)
 
         if self.filename:
