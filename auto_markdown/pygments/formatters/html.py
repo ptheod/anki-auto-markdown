@@ -696,7 +696,7 @@ class HtmlFormatter(Formatter):
         if self.prestyles:
             style.append(self.prestyles)
         if self.noclasses:
-            style.append('line-height: 125%')
+            style.append('line-height: 100%')
         style = '; '.join(style)
 
         if self.filename:
